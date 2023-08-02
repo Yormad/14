@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+    }
+
+    .wrapper {
+        display: grid;
+    }
+
+    .wrapper div {
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .color-white {
+        color: #ffffff
+    }
+
+    .header {
+        grid-area: header;
+        padding: 15px 0px;
+        background-color: #0F1629;
+    }
+
+    .menu {
+        grid-area: menu;
+        padding: 15px 0px;
+        background-color: #EF3D4D;
+    }
+
+    .hero {
+        grid-area: hero;
+        padding: 45px 0px;
+        background-color: #4C86C6;
+    }
+
+    .main {
+        grid-area: main;
+        padding: 45px 0px;
+        background-color: #23344B;
+    }
+
+    .banner {
+        grid-area: banner;
+        padding: 30px 0px;
+        background-color: #FFD169;
+    }
+
+    .extra {
+        grid-area: extra;
+        padding: 30px 0px;
+        background-color: #4DBD97;
+    }
+
+    .image {
+        grid-area: image;
+        padding: 30px 0px;
+        background-color: #C1E4E6;
+    }
+
+    @media screen and (min-width: 1101px) {
+        .wrapper{
+            grid-template-areas: "header menu menu menu"
+                                 "hero hero hero hero"
+                                 "hero hero hero hero"
+                                 "hero hero hero hero"
+                                 "main main . image"
+                                 "main main . extra"
+                                 "banner banner banner banner"
+        }
+    }
+    @media (min-width: 769px) and (max-width: 1100px) {
+        .wrapper{
+            grid-template-areas: "header header header header"
+                                 "hero hero hero hero"
+                                 "hero hero hero hero"
+                                 "hero hero hero hero"
+                                 "menu main main main"
+                                 "menu main main main"
+                                 "menu banner banner banner"
+                                 "menu extra extra image";
+
+        }
+    }
+
+
+    @media screen and (max-width: 768px) {
+        .wrapper {
+            grid-template-areas: "header"
+                                  "menu"
+                                  "hero"
+                                  "main"
+                                  "banner"
+                                  "extra"
+                                   "image"
+        }
+    }
+
+</style>
+<body>
+<!--1fr фрактал-->
+<div class="wrapper">
+    <div class="header color-white">header</div>
+    <div class="menu color-white">menu</div>
+    <div class="hero color-white">hero</div>
+    <div class="main color-white">main</div>
+    <div class="banner">banner</div>
+    <div class="extra">extra</div>
+    <div class="image">image</div>
+</div>
+
+
+</body>
+
+</html>
